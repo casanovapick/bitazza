@@ -13,4 +13,8 @@ class LoginWebSocketDataSource(private val webSocketService: WebSocketService) :
             request = loginRequest
         )
     }
+
+    override fun logout() {
+        webSocketService.sendRequest("Logout",Unit)
+    }
 }

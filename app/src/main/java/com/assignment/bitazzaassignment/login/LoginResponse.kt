@@ -1,42 +1,43 @@
 package com.assignment.bitazzaassignment.login
 
 
-import com.squareup.moshi.Json
-import kotlinx.android.parcel.Parcelize
-import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 
 
 data class LoginResponse(
-    @SerializedName("authenticated")
-    val authenticated: Boolean = false, // true
-    @SerializedName("errormsg")
-    val errormsg: String = "",
-    @SerializedName("locked")
-    val locked: Boolean = false, // false
-    @SerializedName("requires2FA")
-    val requires2FA: Boolean = false, // false
-    @SerializedName("twoFAToken")
-    val twoFAToken: String = "",
-    @SerializedName("twoFAType")
-    val twoFAType: String = "",
-    @SerializedName("user")
-    val user: User = User()
+        @SerializedName("Authenticated")
+        val authenticated: Boolean = false, // true
+        @SerializedName("EnforceEnable2FA")
+        val enforceEnable2FA: Boolean = false, // false
+        @SerializedName("errormsg")
+        val errormsg: String = "", // null
+        @SerializedName("Locked")
+        val locked: Boolean = false, // false
+        @SerializedName("Requires2FA")
+        val requires2FA: Boolean = false, // false
+        @SerializedName("SessionToken")
+        val sessionToken: String = "", // f950d832-83f5-496e-ba96-ea4a66c9a277
+        @SerializedName("TwoFAToken")
+        val twoFAToken: String = "", // null
+        @SerializedName("TwoFAType")
+        val twoFAType: String = "", // null
+        @SerializedName("User")
+        val user: User = User()
 ) {
     data class User(
-        @SerializedName("accountId")
-        val accountId: Int = 0, // 0
-        @SerializedName("email")
-        val email: String = "",
-        @SerializedName("emailVerified")
-        val emailVerified: Boolean = false, // false
-        @SerializedName("omsId")
-        val omsId: Int = 0, // 0
-        @SerializedName("use2FA")
-        val use2FA: Boolean = false, // false
-        @SerializedName("userId")
-        val userId: Int = 0, // 0
-        @SerializedName("userName")
-        val userName: String = ""
+            @SerializedName("AccountId")
+            val accountId: Int = 0, // 5047
+            @SerializedName("Email")
+            val email: String = "", // pick.mail4fb@gmail.com
+            @SerializedName("EmailVerified")
+            val emailVerified: Boolean = false, // true
+            @SerializedName("OMSId")
+            val oMSId: Int = 0, // 1
+            @SerializedName("Use2FA")
+            val use2FA: Boolean = false, // false
+            @SerializedName("UserId")
+            val userId: Int = 0, // 2651
+            @SerializedName("UserName")
+            val userName: String = "" // pick.mail4fb@gmail.com
     )
 }

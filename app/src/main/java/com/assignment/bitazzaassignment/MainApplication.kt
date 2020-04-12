@@ -1,6 +1,7 @@
 package com.assignment.bitazzaassignment
 
 import android.app.Application
+import com.assignment.bitazzaassignment.home.homeModule
 import com.assignment.bitazzaassignment.login.loginModule
 import com.assignment.bitazzaassignment.splash.splashModule
 import com.assignment.bitazzaassignment.webscoket.webSocketApiModule
@@ -13,7 +14,7 @@ class MainApplication : Application() {
         super.onCreate()
         startKoin {
             androidContext(this@MainApplication)
-            modules(webSocketApiModule, loginModule, splashModule)
+            modules(webSocketApiModule, loginModule, splashModule,homeModule)
         }
         Stetho.initializeWithDefaults(this)
     }

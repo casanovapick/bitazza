@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="16dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        style="@style/TextAppearance.AppCompat.Large"
+        android:id="@+id/symbolText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BTCUSD"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:id="@+id/lastTradeText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="0"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@+id/changePxText"
+        app:layout_constraintStart_toEndOf="@+id/symbolText"
+        app:layout_constraintTop_toTopOf="@+id/symbolText" />
+
+    <TextView
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:id="@+id/bestOfferText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@+id/lastTradeText"
+        app:layout_constraintStart_toStartOf="@+id/lastTradeText"
+        app:layout_constraintTop_toBottomOf="@+id/lastTradeText" />
+
+    <TextView
+        style="@style/TextAppearance.AppCompat.Small"
+        android:id="@+id/changePxText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:gravity="end"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/bestOfferText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/lastTradeText" />
+</androidx.constraintlayout.widget.ConstraintLayout>

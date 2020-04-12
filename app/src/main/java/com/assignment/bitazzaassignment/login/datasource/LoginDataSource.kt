@@ -7,4 +7,5 @@ import io.reactivex.Observable
 
 interface LoginDataSource {
     fun login(loginRequest: LoginRequest): Flowable<LoginResponse>
+    fun logout()
 }
